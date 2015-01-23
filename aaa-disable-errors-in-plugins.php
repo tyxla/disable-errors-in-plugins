@@ -1,7 +1,7 @@
 <?php
 /*
 Plugin Name: Disable Errors in Plugins
-Description: Disables error reporting and error logging for plugins.
+Description: Disables error reporting and error logging for plugins. Useful when you develop themes, or .
 Version: 1.0
 Author: tyxla
 Author URI: https://github.com/tyxla
@@ -35,21 +35,19 @@ class Disable_Errors_In_Plugins {
 	 * @return bool True if error is within /plugins, false otherwise.
 	 */
 	public function error_handler($errno, $errstr, $errfile, $errline, $errcontext) {
-	    // We don't care about STRICT errors -- many of them are being generated because 
-	    // of the PHP 4 compliance (e.g. using var instead of of public / protected / private).
-	    if ( defined('E_STRICT') && $errno == E_STRICT ) {
-	        return;
-	    }
+		// path to error file
+		$error_file = str_replace('\\', '/', $errfile);
 
-	    $error_file = str_replace('\\', '/', $errfile);
-	    $content_dir = str_replace('\\', '/', WP_CONTENT_DIR . '/plugins');
-	    if (strpos($error_file, $content_dir) !== false) {
-	        // do nothing for errors inside of the plugins directory
-	        return true;
-	    }
+		// path to plugins
+		$content_dir = str_replace('\\', '/', WP_CONTENT_DIR . '/plugins');
 
-	    // default error handler otherwise
-	    return false;
+		// do nothing for errors inside of the plugins directory
+		if (strpos($error_file, $content_dir) !== false) {
+			return true;
+		}
+
+		// default error handler otherwise
+		return false;
 	}
 
 }
