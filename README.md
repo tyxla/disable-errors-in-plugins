@@ -1,6 +1,8 @@
 Disable Errors in Plugins
 =========================
 
+## Version 1.0.1
+
 ### About
 
 A WordPress plugin that simply disables error reporting and error logging for all plugins.
