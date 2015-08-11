@@ -2,12 +2,12 @@
 /*
 Plugin Name: Disable Errors in Plugins
 Description: Disables error reporting and error logging for plugins. Useful when you develop themes, or you just want to use a plugin that has notices/warnings.
-Version: 1.0.1
+Version: 1.0.2
 Author: tyxla
 Author URI: https://github.com/tyxla
 License: GPL2
 Requires at least: 3.0
-Tested up to: 4.2
+Tested up to: 4.3
 */
 
 /**

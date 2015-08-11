@@ -2,8 +2,8 @@
 Contributors: tyxla
 Tags: error, disable, hide, plugin, notice, warning
 Requires at least: 3.0
-Tested up to: 4.2
-Stable tag: 1.0.1
+Tested up to: 4.3
+Stable tag: 1.0.2
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
@@ -24,6 +24,9 @@ The plugin file name begins with `000-`, because this way it would assure being 
 1. That's it. You're ready to go!
 
 == Changelog ==
+
+= 1.0.2 =
+Tested for WordPress 4.3.
 
 = 1.0.1 =
 The plugin will now load earlier.
